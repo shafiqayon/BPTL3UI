@@ -42,24 +42,25 @@
             />
         <activity
             android:name=".Client_Setup"
+            android:label="Client Setup"
             android:launchMode="singleTop"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".dailyworkprogram"
             android:label="Daily Work Program Entry"
             android:launchMode="singleTop"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".dash">
+            android:parentActivityName=".dash"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ayon.rahman.shafiqur.bptl3ui.dash" />
         </activity>
         <activity
             android:name=".clientView"
-            android:label="Entered Clients"
+            android:label="Entries"
             android:launchMode="singleTop"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".dash">
+            android:parentActivityName=".dash"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ayon.rahman.shafiqur.bptl3ui.dash" />
@@ -68,8 +69,8 @@
             android:name=".clientViewDetails"
             android:label="Client Information"
             android:launchMode="singleTop"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".clientView">
+            android:parentActivityName=".clientView"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ayon.rahman.shafiqur.bptl3ui.clientView" />
@@ -77,16 +78,25 @@
         <activity
             android:name=".clientUpdate"
             android:label="Update Entry"
-            android:theme="@style/AppTheme.NoActionBar"
             android:launchMode="singleTop"
-            android:parentActivityName=".clientView">
+            android:parentActivityName=".clientView"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ayon.rahman.shafiqur.bptl3ui.clientView" />
         </activity>
-        <activity android:name=".clientViewByDate"     android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".workviewbydatebetween"     android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".workupdateentry"     android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".clientViewByDate"
+            android:label="Client View By Date"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".workviewbydatebetween"
+            android:label="Entries"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".workupdateentry"
+            android:label="Update Entry"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
