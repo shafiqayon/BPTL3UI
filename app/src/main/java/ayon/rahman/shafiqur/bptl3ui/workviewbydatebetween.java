@@ -80,6 +80,7 @@ public class workviewbydatebetween extends AppCompatActivity
                         public void onClick(DialogInterface arg0, int arg1) {
                             Intent i = new Intent(workviewbydatebetween.this, clientViewByDate.class);
                             i.putExtra("username", usernamepassed);
+
                             startActivity(i);
                         }
                     });
@@ -131,6 +132,9 @@ public class workviewbydatebetween extends AppCompatActivity
                                /* Toast.makeText(workviewbydatebetween.this, onlyClient.get(position) + "id : \n"+clientIdArray.get(position)+"Ref no \n"+PRE_JOB_REF_NOArray.get(position), Toast.LENGTH_LONG).show();*/
                                 Intent i = new Intent(workviewbydatebetween.this, workupdateentry.class);
                                 i.putExtra("refno", PRE_JOB_REF_NOArray.get(position));
+                                i.putExtra("username", usernamepassed);
+                                i.putExtra("startDate", startDatePassed);
+                                i.putExtra("endDate", endDatePassed);
                                 startActivity(i);
                             }
                         });

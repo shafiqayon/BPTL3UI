@@ -51,7 +51,7 @@ public class workupdateentry extends AppCompatActivity
     String[] servicenamearray;
     Spinner workstationnamespinner, mediumoftransportspinner, clientSpinner, servicenamespinner;
     String sworkstationnamespinner, smediumoftransportspinner, sclientSpinner, sremarks, sstarttime, sendtime, sPRE_JOB_REF_NO, sclientId, mot, wsCode, jobid;
-    String selectedworkspinner, PRE_JOB_REF_NO, selectedmot, refNoPassed, usernamepassed, serverdailywork = "http://103.229.84.171/dailywork.php",
+    String selectedworkspinner, PRE_JOB_REF_NO, selectedmot, refNoPassed, usernamepassed, startDatePassed,endDatePassed,serverdailywork = "http://103.229.84.171/dailywork.php",
             serviceselected = "", servernameforservice = "http://103.229.84.171/service.php",
             sernameforclientinfo = "http://103.229.84.171/clientnametoworkid.php", clients = "", clientselected = "", clientselectedid = "",
             temp = null, temp2 = null, servernameforwork = "http://103.229.84.171/wsnamesid.php", previousDate = "http://103.229.84.171/updateDataShow.php", updateServer = "http://103.229.84.171/workEntryUpdate.php";
@@ -71,6 +71,9 @@ public class workupdateentry extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.workupdateentry);
         refNoPassed = getIntent().getExtras().getString("refno");
+        startDatePassed = getIntent().getExtras().getString("startDate");
+        endDatePassed = getIntent().getExtras().getString("endDate");
+        usernamepassed = getIntent().getExtras().getString("username");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -417,6 +420,13 @@ public class workupdateentry extends AppCompatActivity
                     }
                 };
                 requestQueue.add(udpate);
+
+
+                Intent i = new Intent(workupdateentry.this, workviewbydatebetween.class);
+                i.putExtra("startDate", startDatePassed);
+                i.putExtra("endDate", endDatePassed);
+                i.putExtra("username", usernamepassed);
+                startActivity(i);
             }
 
         });

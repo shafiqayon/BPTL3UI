@@ -336,7 +336,7 @@ public class dailyworkprogram extends AppCompatActivity
                 };
                 requestQueue.add(stringRequest);
                 Toast.makeText(dailyworkprogram.this, "Data Saved", Toast.LENGTH_LONG).show();
-                Intent i = new Intent(dailyworkprogram.this, dailyworkprogram.class);
+                Intent i = new Intent(dailyworkprogram.this, dash.class);
                 i.putExtra("username", usernamepassed);
                 startActivity(i);
             }
