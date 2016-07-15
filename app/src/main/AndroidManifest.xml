@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ayon.rahman.shafiqur.bptl3ui">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+        <activity
+
+            android:name=".Client_Setup"
+            android:label="New Client Setup"
+            android:launchMode="singleTop"
+            android:parentActivityName=".dash">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ayon.rahman.shafiqur.bptl3ui.dash" />
+        </activity>
+        -->
+        <activity
+            android:name=".dash"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar"
+
+            />
+        <activity
+            android:name=".Client_Setup"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".dailyworkprogram"
+            android:label="Daily Work Program Entry"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".dash">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ayon.rahman.shafiqur.bptl3ui.dash" />
+        </activity>
+        <activity
+            android:name=".clientView"
+            android:label="Entered Clients"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".dash">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ayon.rahman.shafiqur.bptl3ui.dash" />
+        </activity>
+        <activity
+            android:name=".clientViewDetails"
+            android:label="Client Information"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".clientView">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ayon.rahman.shafiqur.bptl3ui.clientView" />
+        </activity>
+        <activity
+            android:name=".clientUpdate"
+            android:label="Update Entry"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTop"
+            android:parentActivityName=".clientView">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ayon.rahman.shafiqur.bptl3ui.clientView" />
+        </activity>
+        <activity android:name=".clientViewByDate"     android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".workviewbydatebetween"     android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".workupdateentry"     android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_client_view">
+    <!--
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            tools:context="ayon.rahman.shafiqur.bptl.clientView">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/clientName"
+                android:layout_alignParentTop="true"
+                android:hint="Client Name"
+                android:layout_centerHorizontal="true"
+                android:gravity="center" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clientType"
+                android:layout_below="@+id/clientName"
+                android:layout_centerHorizontal="true"
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/industry"
+                android:spinnerMode="dropdown"
+                android:layout_below="@+id/clientType"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/website"
+                android:hint="Website"
+                android:layout_below="@+id/industry"
+                android:layout_centerHorizontal="true"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/companyName"
+                android:hint="Company Name"
+                android:layout_below="@+id/website"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center" />
+
+            <TextView
+                android:paddingTop="30dp"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="Customer Details"
+                android:textSize="25dp"
+                android:id="@+id/tv"
+                android:layout_below="@+id/companyName"
+                android:layout_alignParentStart="true"
+                android:gravity="center" />
+
+            <EditText
+                android:paddingTop="30dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/contactPerson"
+                android:hint="Contact Person"
+                android:layout_below="@+id/tv"
+                android:layout_alignParentStart="true"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/phoneNumber"
+                android:hint="Phone Number"
+                android:inputType="number"
+                android:layout_below="@+id/contactPerson"
+                android:layout_alignParentStart="true"
+                android:gravity="center" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addressType"
+                android:hint="Address Type"
+                android:spinnerMode="dropdown"
+                android:layout_below="@+id/phoneNumber"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/address"
+                android:hint="Address"
+                android:inputType="textWebEmailAddress"
+                android:layout_below="@+id/addressType"
+                android:layout_alignParentStart="true"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/email"
+                android:hint="Email"
+                android:inputType="text"
+                android:layout_below="@+id/address"
+                android:layout_alignParentStart="true"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/officePhone"
+                android:hint="Office Phone Number"
+                android:inputType="number"
+                android:layout_below="@+id/email"
+                android:layout_alignParentStart="true"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/decisionMakerName"
+                android:hint="Decision Maker Name"
+                android:layout_below="@+id/officePhone"
+                android:layout_alignParentStart="true"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/decisionMakerNumber"
+                android:hint="Decision Maker Phone Number"
+                android:layout_below="@+id/decisionMakerName"
+                android:inputType="number"
+                android:layout_alignParentStart="true"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/middleManName"
+                android:hint="Middle Man Name"
+                android:layout_below="@+id/decisionMakerNumber"
+                android:layout_alignParentStart="true"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/consultant"
+                android:hint="Consultant Name"
+                android:layout_below="@+id/middleManName"
+                android:layout_alignParentStart="true"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/finance"
+                android:hint="Finance"
+                android:layout_below="@+id/consultant"
+                android:layout_alignParentStart="true"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:id="@+id/requirement"
+                android:hint="Possible Requirement"
+                android:layout_below="@+id/finance"
+                android:layout_alignParentStart="true"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/remarks"
+                android:hint="Remarks"
+                android:layout_below="@+id/requirement"
+                android:layout_alignParentStart="true"
+                android:gravity="center" />
+
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/remarks"
+                android:id="@+id/save"
+                android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:text="Save" />
+        </RelativeLayout>-->
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView" />
+</RelativeLayout>

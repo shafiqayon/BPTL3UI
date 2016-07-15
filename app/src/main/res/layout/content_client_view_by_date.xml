@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:foregroundGravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_client_view_by_date"
+    tools:context="ayon.rahman.shafiqur.bptl.clientViewByDate">
+
+    <Button
+        android:id="@+id/bydate"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="Select Start Date"
+        android:background="#01B0B5" />
+
+    <Button
+        android:id="@+id/viewAll"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/bydate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="68dp"
+        android:text="Select End Date"
+        android:background="#01B0B5" />
+
+    <Button
+        android:id="@+id/viewDates"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/viewAll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="View Entries"
+        android:background="#01B0B5" />
+
+    <TextView
+        android:id="@+id/starttv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bydate"
+        android:layout_centerHorizontal="true"
+        android:text="Start Date"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/endtv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewAll"
+        android:layout_centerHorizontal="true"
+        android:text="End Date"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

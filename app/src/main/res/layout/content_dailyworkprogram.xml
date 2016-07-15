@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_dailyworkprogram"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:scaleType="fitXY">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/app_bar_dailyworkprogram"
+        tools:context="ayon.rahman.shafiqur.bptl.dailyworkprogram">
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clientNameInSpinner"
+
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/serviceNamespinner"
+            android:layout_below="@+id/clientNameInSpinner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Time"
+            android:id="@+id/startTimeBtn"
+            android:layout_below="@+id/serviceNamespinner"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:background="#01B0B5"
+            android:textColor="#ffffff"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Time"
+            android:id="@+id/startTimetextView"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/startTimeBtn"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="End Time"
+            android:id="@+id/endButton"
+            android:layout_below="@+id/startTimetextView"
+            android:layout_alignParentEnd="true"
+            android:background="#01B0B5"
+            android:textColor="#ffffff"
+            android:layout_marginTop="20dp" />
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="End Time "
+            android:id="@+id/endTimetextView"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_below="@+id/endButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+        <!--
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="time"
+                    android:ems="10"
+                    android:hint="Hours"
+                    android:id="@+id/hours"
+                    android:layout_below="@+id/endTimetextView"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center" />-->
+
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ws"
+            android:layout_below="@+id/endTimetextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+        <!--
+         <TextView
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:inputType="number"
+             android:ems="10"
+             android:hint="Rate"
+             android:id="@+id/rate"
+             android:gravity="center"
+             android:layout_below="@+id/ws"
+             android:layout_alignParentStart="true"
+             android:textSize="20dp"
+             android:layout_margin="10dp"
+             />-->
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mot"
+            android:layout_below="@+id/ws"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:hint="Remarks"
+            android:id="@+id/remarks"
+            android:layout_below="@+id/mot"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/savework"
+            android:text="Save"
+            android:layout_below="@id/remarks"
+            android:layout_centerHorizontal="true"
+            android:background="#01B0B5"
+            android:textColor="#ffffff"
+            android:layout_marginTop="20dp" />
+    </RelativeLayout>
+
+
+</ScrollView>
