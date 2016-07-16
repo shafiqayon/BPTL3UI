@@ -24,5 +24,4 @@
     <include layout="@layout/content_workviewbydatebetween" />
 
 
-
 </android.support.design.widget.CoordinatorLayout>

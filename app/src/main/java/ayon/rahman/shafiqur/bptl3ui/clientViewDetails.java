@@ -29,9 +29,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class clientViewDetails extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener  {
+        implements NavigationView.OnNavigationItemSelectedListener {
     String clientName = "empty", serverAddress = "http://103.229.84.171/clientDetail.php";
-    String website, contactPerson, phone, address, email, officephone, clientType, usernamepassed,industryname,
+    String website, contactPerson, phone, address, email, officephone, clientType, usernamepassed, industryname,
             decisionMaker, decisionMakerNumber, middleMan, consultant, finance, possibleRequirement, remarks;
     TextView sclientName, swebsite, scontactPerson, sphone, saddress, semail, sofficephone, sclientType, sindustryname,
             sdecisionMaker, sdecisionMakerNumber, smiddleMan, sconsultant, sfinance, spossibleRequirement, sremarks;
@@ -42,7 +42,6 @@ public class clientViewDetails extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_view_details);
         usernamepassed = getIntent().getExtras().getString("username");
-
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -251,6 +250,7 @@ public class clientViewDetails extends AppCompatActivity
         requestQueue.add(stringRequest);
 
     }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -277,7 +277,7 @@ public class clientViewDetails extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent i = new Intent(getApplicationContext(),MainActivity.class);
+            Intent i = new Intent(getApplicationContext(), MainActivity.class);
             Toast.makeText(getApplicationContext(), "Logging Out", Toast.LENGTH_SHORT).show();
             startActivity(i);
         }

@@ -23,9 +23,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
+    public String category = null;
     EditText usernameet, passwordet;
     Button loginbtn;
-    public String category = null;
     String servername = "http://103.229.84.171/s.php", name = "name", password = "password", statusReply;
 
     @Override

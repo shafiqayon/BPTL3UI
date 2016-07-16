@@ -37,7 +37,7 @@ import java.util.List;
 import java.util.Map;
 
 public class clientUpdate extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener  {
+        implements NavigationView.OnNavigationItemSelectedListener {
     public String clientTypeJson = null, addessTypeJson, industryname;
     public String category = null, usernamepassed, selectedInSpinner = "nothing selected", industrySelected = null, addressTypeSelected = null, clientTypeSelected = null, selectedInSpinnerAddresstype = null, selectedInSpinnerClientType = null;
     String serverAddressfordata = "http://103.229.84.171/clientUpdateView.php", serverAddressforupdate = "http://103.229.84.171/clientUpdate.php";
@@ -169,8 +169,6 @@ public class clientUpdate extends AppCompatActivity
                         requestQueue.add(jsonArrayRequest);
 
 
-
-
                     } else {
                         sindustryname.setText("No Data  for industry");
                     }
@@ -214,9 +212,6 @@ public class clientUpdate extends AppCompatActivity
                         });
 
                         //clinet Type ends here
-
-
-
 
 
                     } else {
@@ -446,6 +441,7 @@ public class clientUpdate extends AppCompatActivity
             }
         });
     }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -472,7 +468,7 @@ public class clientUpdate extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent i = new Intent(getApplicationContext(),MainActivity.class);
+            Intent i = new Intent(getApplicationContext(), MainActivity.class);
             Toast.makeText(getApplicationContext(), "Logging Out", Toast.LENGTH_SHORT).show();
             startActivity(i);
         }

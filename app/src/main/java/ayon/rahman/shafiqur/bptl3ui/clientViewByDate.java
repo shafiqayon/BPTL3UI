@@ -22,12 +22,23 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class clientViewByDate extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener  {
+        implements NavigationView.OnNavigationItemSelectedListener {
     Button startDate, endDate, viewDate;
     String startDateString, endDateString, usernamepassed;
     Calendar c;
-    private int mYear, mMonth, mDay, mHour, mMinute;
     TextView endTV, startTV;
+    private int mYear, mMonth, mDay, mHour, mMinute;
+
+    private static String formatDate(int year, int month, int day) {
+
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(0);
+        cal.set(year, month, day);
+        Date date = cal.getTime();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+
+        return sdf.format(date);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,16 +132,6 @@ public class clientViewByDate extends AppCompatActivity
 
     }
 
-    private static String formatDate(int year, int month, int day) {
-
-        Calendar cal = Calendar.getInstance();
-        cal.setTimeInMillis(0);
-        cal.set(year, month, day);
-        Date date = cal.getTime();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
-
-        return sdf.format(date);
-    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -157,7 +158,7 @@ public class clientViewByDate extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent i = new Intent(getApplicationContext(),MainActivity.class);
+            Intent i = new Intent(getApplicationContext(), MainActivity.class);
             Toast.makeText(getApplicationContext(), "Logging Out", Toast.LENGTH_SHORT).show();
             startActivity(i);
         }

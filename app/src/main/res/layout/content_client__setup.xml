@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="@dimen/activity_vertical_margin"
 
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -11,271 +11,272 @@
     tools:showIn="@layout/app_bar_client_update">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#ffffff"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:showIn="@layout/app_bar_client__setup"
         tools:context="ayon.rahman.shafiqur.bptl.Client_Setup"
-        android:background="#ffffff">
+        tools:showIn="@layout/app_bar_client__setup">
 
         <TextView
-            android:paddingTop="30dp"
+            android:id="@+id/customerInfo"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
-            android:text="Customer Info"
-            android:textSize="25dp"
             android:layout_alignParentTop="true"
-            android:id="@+id/customerInfo"
-
-            android:gravity="center"
             android:layout_marginTop="15dp"
-            android:textColor="#000000" />
+            android:gravity="center"
+            android:paddingTop="30dp"
+
+            android:text="Customer Info"
+            android:textColor="#000000"
+            android:textSize="25dp" />
+
         <EditText
+            android:id="@+id/clientName"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/clientName"
 
-            android:hint="Client Name"
             android:layout_below="@+id/customerInfo"
             android:layout_centerHorizontal="true"
-            android:gravity="center"
             android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:hint="Client Name"
             android:textColor="#000000"
             android:textColorHint="#A8A8A8" />
 
         <Spinner
+            android:id="@+id/clientType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/clientType"
             android:layout_below="@+id/clientName"
             android:layout_centerHorizontal="true"
-            android:spinnerMode="dropdown"
-            android:layout_marginTop="15dp" />
+            android:layout_marginTop="15dp"
+            android:spinnerMode="dropdown" />
 
         <Spinner
+            android:id="@+id/industry"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/industry"
-            android:spinnerMode="dropdown"
             android:layout_below="@+id/clientType"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp" />
+            android:layout_marginTop="15dp"
+            android:spinnerMode="dropdown" />
 
         <EditText
+            android:id="@+id/website"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/website"
-            android:hint="Website"
             android:layout_below="@+id/industry"
             android:layout_centerHorizontal="true"
-            android:gravity="center"
             android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:hint="Website"
             android:textColor="#000000"
             android:textColorHint="#A8A8A8" />
 
         <EditText
+            android:id="@+id/companyName"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/companyName"
-            android:hint="Company Name"
             android:layout_below="@+id/website"
-            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:gravity="center"
+            android:layout_centerVertical="true"
             android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:hint="Company Name"
             android:textColor="#000000"
             android:textColorHint="#A8A8A8" />
 
         <TextView
-            android:paddingTop="30dp"
+            android:id="@+id/tv"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
-            android:text="Customer Details"
-            android:textSize="25dp"
-            android:id="@+id/tv"
-            android:layout_below="@+id/companyName"
             android:layout_alignParentStart="true"
-            android:gravity="center"
+            android:layout_below="@+id/companyName"
             android:layout_marginTop="15dp"
-            android:textColor="#000000" />
+            android:gravity="center"
+            android:paddingTop="30dp"
+            android:text="Customer Details"
+            android:textColor="#000000"
+            android:textSize="25dp" />
 
         <EditText
-            android:paddingTop="30dp"
+            android:id="@+id/contactPerson"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/contactPerson"
-            android:hint="Contact Person"
-            android:layout_below="@+id/tv"
             android:layout_alignParentStart="true"
-            android:gravity="center"
+            android:layout_below="@+id/tv"
             android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:hint="Contact Person"
+            android:paddingTop="30dp"
             android:textColor="#000000"
             android:textColorHint="#A8A8A8" />
 
         <EditText
+            android:id="@+id/phoneNumber"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/phoneNumber"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/contactPerson"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
             android:hint="Phone Number"
             android:inputType="number"
-            android:layout_below="@+id/contactPerson"
-            android:layout_alignParentStart="true"
-            android:gravity="center"
-            android:layout_marginTop="15dp"
             android:textColor="#000000"
             android:textColorHint="#A8A8A8" />
 
         <Spinner
+            android:id="@+id/addressType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/addressType"
-            android:hint="Address Type"
-            android:spinnerMode="dropdown"
             android:layout_below="@+id/phoneNumber"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp" />
+            android:layout_marginTop="15dp"
+            android:hint="Address Type"
+            android:spinnerMode="dropdown" />
 
         <EditText
+            android:id="@+id/address"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/address"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/addressType"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
             android:hint="Address"
             android:inputType="textWebEmailAddress"
-            android:layout_below="@+id/addressType"
-            android:layout_alignParentStart="true"
-            android:gravity="center"
-            android:layout_marginTop="15dp"
             android:textColor="#000000"
             android:textColorHint="#A8A8A8" />
 
         <EditText
+            android:id="@+id/email"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/email"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/address"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
             android:hint="Email"
             android:inputType="text"
-            android:layout_below="@+id/address"
-            android:layout_alignParentStart="true"
-            android:gravity="center"
-            android:layout_marginTop="15dp"
             android:textColor="#000000"
             android:textColorHint="#A8A8A8" />
 
         <EditText
+            android:id="@+id/officePhone"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/officePhone"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/email"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
             android:hint="Office Phone Number"
             android:inputType="number"
-            android:layout_below="@+id/email"
-            android:layout_alignParentStart="true"
-            android:gravity="center"
-            android:layout_marginTop="15dp"
             android:textColor="#000000"
             android:textColorHint="#A8A8A8" />
 
         <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/decisionMakerName"
-            android:hint="Decision Maker Name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/officePhone"
-            android:layout_alignParentStart="true"
-            android:gravity="center"
             android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:hint="Decision Maker Name"
             android:textColor="#000000"
             android:textColorHint="#A8A8A8" />
 
         <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/decisionMakerNumber"
-            android:hint="Decision Maker Phone Number"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/decisionMakerName"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:hint="Decision Maker Phone Number"
             android:inputType="number"
-            android:layout_alignParentStart="true"
-            android:gravity="center"
-            android:layout_marginTop="15dp"
             android:textColor="#000000"
             android:textColorHint="#A8A8A8" />
 
         <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/middleManName"
-            android:hint="Middle Man Name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/decisionMakerNumber"
-            android:layout_alignParentStart="true"
-            android:gravity="center"
             android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:hint="Middle Man Name"
             android:textColor="#000000"
             android:textColorHint="#A8A8A8" />
 
         <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/consultant"
-            android:hint="Consultant Name"
-            android:layout_below="@+id/middleManName"
-            android:layout_alignParentStart="true"
-            android:gravity="center"
-            android:layout_marginTop="15dp"
-            android:textColor="#000000"
-            android:textColorHint="#A8A8A8" />
-
-        <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/finance"
-            android:hint="Finance"
-            android:layout_below="@+id/consultant"
             android:layout_alignParentStart="true"
-            android:gravity="center"
+            android:layout_below="@+id/middleManName"
             android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:hint="Consultant Name"
             android:textColor="#000000"
             android:textColorHint="#A8A8A8" />
 
         <EditText
+            android:id="@+id/finance"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/consultant"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:hint="Finance"
+            android:textColor="#000000"
+            android:textColorHint="#A8A8A8" />
+
+        <EditText
+            android:id="@+id/requirement"
             android:layout_width="fill_parent"
             android:layout_height="80dp"
-            android:id="@+id/requirement"
-            android:hint="Possible Requirement"
-            android:layout_below="@+id/finance"
             android:layout_alignParentStart="true"
-            android:gravity="center"
+            android:layout_below="@+id/finance"
             android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:hint="Possible Requirement"
             android:textColor="#000000"
             android:textColorHint="#A8A8A8" />
 
         <EditText
+            android:id="@+id/remarks"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/remarks"
-            android:hint="Remarks"
-            android:layout_below="@+id/requirement"
             android:layout_alignParentStart="true"
-            android:gravity="center"
+            android:layout_below="@+id/requirement"
             android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:hint="Remarks"
             android:textColor="#000000"
             android:textColorHint="#A8A8A8" />
 
 
         <Button
+            android:id="@+id/save"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/remarks"
-            android:id="@+id/save"
-            android:gravity="center"
             android:layout_alignParentStart="true"
-            android:text="Save"
+            android:layout_below="@id/remarks"
             android:layout_marginTop="15dp"
             android:background="#01B0B5"
+            android:gravity="center"
+            android:text="Save"
             android:textColor="#000000"
             android:textColorHint="#A8A8A8" />
     </RelativeLayout>

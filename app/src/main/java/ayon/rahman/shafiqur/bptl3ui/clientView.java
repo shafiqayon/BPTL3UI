@@ -35,13 +35,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class clientView extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener  {
+        implements NavigationView.OnNavigationItemSelectedListener {
+    public ArrayList<String> companyarray = new ArrayList<String>();
     String usernamepassed, clientGet = "http://103.229.84.171/getClient.php", temp, CLIENT_ID, CLIENT_NAME, ADDRESS, PHONE_NUMBER,
             EMAIL, OFFICE_PHONE, WEB_ADDRESS, CONTACT_PERSON, ADDRESS_2, INDUSTRY_NAME, CLIENT_TYPE, ENTER_DT, USER_NAME, COMPANY_NAME;
     RequestQueue requestQueue;
     ListView listView;
     ArrayAdapter<String> adapter;
-    public ArrayList<String> companyarray = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -152,6 +152,7 @@ public class clientView extends AppCompatActivity
         startActivity(intent);
 
     }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -178,7 +179,7 @@ public class clientView extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent i = new Intent(getApplicationContext(),MainActivity.class);
+            Intent i = new Intent(getApplicationContext(), MainActivity.class);
             Toast.makeText(getApplicationContext(), "Logging Out", Toast.LENGTH_SHORT).show();
             startActivity(i);
         }

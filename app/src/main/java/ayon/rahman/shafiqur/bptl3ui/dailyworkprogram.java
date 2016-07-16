@@ -41,7 +41,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class dailyworkprogram extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener  {
+        implements NavigationView.OnNavigationItemSelectedListener {
     public long endh, endm, starth, startm;
     public int endmonth, enddate, endyear, startmonth, startdate, startyear;
     Button starttime, endtime;
@@ -374,7 +374,7 @@ public class dailyworkprogram extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent i = new Intent(getApplicationContext(),MainActivity.class);
+            Intent i = new Intent(getApplicationContext(), MainActivity.class);
             Toast.makeText(getApplicationContext(), "Logging Out", Toast.LENGTH_SHORT).show();
             startActivity(i);
         }

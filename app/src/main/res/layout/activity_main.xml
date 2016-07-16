@@ -10,69 +10,69 @@
     tools:context="ayon.rahman.shafiqur.bptl.MainActivity">
 
     <EditText
-        android:layout_below="@+id/textView19"
+        android:id="@+id/user_Name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/textView19"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dp"
-        android:id="@+id/user_Name"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
         android:hint="User Name"
         android:textColor="#000000"
-        android:gravity="center"
-        android:layout_marginTop="80dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:textColorHint="#7a7a7a" />
 
     <EditText
+        android:id="@+id/password"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:id="@+id/password"
-        android:hint="Password"
-        android:textColor="#000000"
-        android:gravity="center"
-        android:inputType="textPassword"
         android:layout_below="@+id/user_Name"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#000000"
         android:textColorHint="#7a7a7a" />
 
     <Button
+        android:id="@+id/loginbutton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Log In"
-        android:id="@+id/loginbutton"
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="39dp"
         android:background="#FF6B71"
+        android:text="Log In"
         android:textColor="#ffffff" />
 
     <TextView
-        android:layout_below="@+id/loginbutton"
+        android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/appby"
-        android:id="@+id/textView21"
-        android:gravity="center"
-        android:textColor="#a39f9f"
         android:layout_alignParentBottom="true"
+        android:layout_below="@+id/loginbutton"
         android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/appby"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#a39f9f"
         android:textSize="8dp" />
 
     <TextView
+        android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BAY POWER TECHNOLOGIES LTD."
-        android:id="@+id/textView19"
-        android:layout_marginTop="20dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textColor="#000000"
-        android:textSize="22dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:singleLine="false" />
+        android:singleLine="false"
+        android:text="BAY POWER TECHNOLOGIES LTD."
+        android:textColor="#000000"
+        android:textSize="22dp" />
 </RelativeLayout>

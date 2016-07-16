@@ -35,7 +35,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class workviewbydatebetween extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener  {
+        implements NavigationView.OnNavigationItemSelectedListener {
     public ArrayList<String> clientArray = new ArrayList<String>();
     public ArrayList<String> onlyClient = new ArrayList<String>();
     public ArrayList<String> clientIdArray = new ArrayList<String>();
@@ -200,7 +200,7 @@ public class workviewbydatebetween extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent i = new Intent(getApplicationContext(),MainActivity.class);
+            Intent i = new Intent(getApplicationContext(), MainActivity.class);
             Toast.makeText(getApplicationContext(), "Logging Out", Toast.LENGTH_SHORT).show();
             startActivity(i);
         }

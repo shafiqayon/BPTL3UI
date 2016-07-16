@@ -24,5 +24,4 @@
     <include layout="@layout/content_dash" />
 
 
-
 </android.support.design.widget.CoordinatorLayout>
