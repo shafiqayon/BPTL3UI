@@ -37,9 +37,7 @@
         <activity
             android:name=".dash"
             android:launchMode="singleTop"
-            android:theme="@style/AppTheme.NoActionBar"
-
-            />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Client_Setup"
             android:label="Client Setup"
@@ -100,7 +98,8 @@
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".workentryviewdetails"></activity>
     </application>
 
 </manifest>

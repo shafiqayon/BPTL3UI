@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 public class dash extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    Button customer, dailywork, clientView, alert;
+    Button customer, dailywork, clientView, alert, workview;
     String usernamepassed = "empty";
 
     @Override
@@ -40,6 +40,8 @@ public class dash extends AppCompatActivity
         dailywork = (Button) findViewById(R.id.dailywork);
         clientView = (Button) findViewById(R.id.clientview);
         alert = (Button) findViewById(R.id.datepicker);
+        workview = (Button) findViewById(R.id.workview);
+
         customer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +71,15 @@ public class dash extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(dash.this, clientViewByDate.class);
+                i.putExtra("username", usernamepassed);
+                startActivity(i);
+            }
+        });
+
+        workview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(dash.this, workentryviewdetails.class);
                 i.putExtra("username", usernamepassed);
                 startActivity(i);
             }

@@ -74,6 +74,7 @@ public class workupdateentry extends AppCompatActivity
         startDatePassed = getIntent().getExtras().getString("startDate");
         endDatePassed = getIntent().getExtras().getString("endDate");
         usernamepassed = getIntent().getExtras().getString("username");
+        Log.e("usrnam psd upd", usernamepassed);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -101,6 +102,7 @@ public class workupdateentry extends AppCompatActivity
             @Override
             public void onResponse(String response) {
                 Log.e("workupdateentry ", response);
+                Log.e("usrnam psd upd", usernamepassed);
                 JSONArray jsonArray = null;
                 try {
                     jsonArray = new JSONArray(response);
@@ -167,7 +169,7 @@ public class workupdateentry extends AppCompatActivity
                                 @Override
                                 protected Map<String, String> getParams() {
                                     Map<String, String> params = new HashMap<String, String>();
-                                    params.put("user", "S-001");
+                                    params.put("user", usernamepassed);
                                     return params;
                                 }
                             };
