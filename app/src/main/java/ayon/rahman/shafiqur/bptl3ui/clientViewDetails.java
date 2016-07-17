@@ -58,7 +58,6 @@ public class clientViewDetails extends AppCompatActivity
 
         clientName = getIntent().getExtras().getString("item");
         requestQueue = Volley.newRequestQueue(clientViewDetails.this);
-
         sclientName = (TextView) findViewById(R.id.textView2);
         swebsite = (TextView) findViewById(R.id.textView3);
         scontactPerson = (TextView) findViewById(R.id.textView4);

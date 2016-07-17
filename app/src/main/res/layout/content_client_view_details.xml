@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_client_update">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:background="#ffffff"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="ayon.rahman.shafiqur.bptl.clientViewDetails"
+        tools:context="ayon.rahman.shafiqur.bptl3ui.clientViewDetails"
     tools:showIn="@layout/app_bar_client_view_details">
+
+        >
 
     <TextView
         android:id="@+id/textView"
@@ -23,36 +38,40 @@
         android:textIsSelectable="false"
         android:textSize="20dp" />
 
-    <TextView
-        android:id="@+id/ff"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="All fields and new design will be updated in the next Release"
-        android:textColor="#d06868"
-        android:textIsSelectable="false"
-        android:textSize="10dp" />
+        <!--<TextView
+            android:id="@+id/ff"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="All fields and new design will be updated in the next Release"
+            android:textColor="#d06868"
+            android:textIsSelectable="false"
+            android:textSize="10dp" />-->
 
     <TextView
         android:id="@+id/textView2"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/ff" />
+        android:gravity="left"
+        android:layout_below="@+id/textView" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="left"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
+        android:gravity="left"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView3" />
@@ -63,6 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView4"
+        android:gravity="left"
         android:layout_toLeftOf="@+id/textView" />
 
     <TextView
@@ -70,6 +90,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:gravity="left"
         android:layout_below="@+id/textView5" />
 
     <TextView
@@ -78,6 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:gravity="left"
         android:layout_below="@+id/textView6" />
 
     <TextView
@@ -86,6 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:gravity="left"
         android:layout_below="@+id/textView7" />
 
     <TextView
@@ -94,6 +117,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:gravity="left"
         android:layout_below="@+id/textView8" />
 
     <TextView
@@ -101,6 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:gravity="left"
         android:layout_below="@+id/textView9" />
 
     <TextView
@@ -109,6 +134,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:gravity="left"
         android:layout_below="@+id/textView10" />
 
     <TextView
@@ -117,6 +143,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:gravity="left"
         android:layout_below="@+id/textView11" />
 
     <TextView
@@ -125,6 +152,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:gravity="left"
         android:layout_below="@+id/textView12" />
 
     <TextView
@@ -133,6 +161,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:gravity="left"
         android:layout_below="@+id/textView13" />
 
     <TextView
@@ -140,6 +169,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:gravity="left"
         android:layout_below="@+id/textView14" />
 
     <TextView
@@ -148,6 +178,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:gravity="left"
         android:layout_below="@+id/textView15" />
 
     <TextView
@@ -156,6 +187,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:gravity="left"
         android:layout_below="@+id/textView16" />
 
     <TextView
@@ -164,5 +196,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:gravity="left"
         android:layout_below="@+id/textView17" />
 </RelativeLayout>
+</ScrollView>
