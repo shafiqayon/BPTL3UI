@@ -128,14 +128,49 @@ public class workviewbydatebetween extends AppCompatActivity
                         listView.setAdapter(adapter);
                         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
-                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                               /* Toast.makeText(workviewbydatebetween.this, onlyClient.get(position) + "id : \n"+clientIdArray.get(position)+"Ref no \n"+PRE_JOB_REF_NOArray.get(position), Toast.LENGTH_LONG).show();*/
+                            public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+
+
+                                AlertDialog alBuilder = new AlertDialog.Builder(workviewbydatebetween.this).create();
+                                alBuilder.setMessage("Please Choose an Option");
+                                alBuilder.setTitle("Client");
+                                alBuilder.setIcon(R.drawable.ic_launcher);
+                                alBuilder.setButton(DialogInterface.BUTTON1, "Edit ", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        Intent i = new Intent(workviewbydatebetween.this, workupdateentry.class);
+                                        i.putExtra("refno", PRE_JOB_REF_NOArray.get(position));
+                                        i.putExtra("username", usernamepassed);
+                                        i.putExtra("startDate", startDatePassed);
+                                        i.putExtra("endDate", endDatePassed);
+                                        startActivity(i);
+                                    }
+                                });
+                                alBuilder.setButton(DialogInterface.BUTTON2, "View", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                       /* Intent i = new Intent(workviewbydatebetween.this, clientUpdate.class);
+                                        i.putExtra("item", PRE_JOB_REF_NOArray.get(position));
+                                        i.putExtra("usernamepassed", usernamepassed);
+                                        startActivity(i);*/
+
+
+                                        Toast.makeText(getApplicationContext(), "Edit Option Coming Soon", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+
+
+                                alBuilder.show();
+
+
+
+                              /* *//* Toast.makeText(workviewbydatebetween.this, onlyClient.get(position) + "id : \n"+clientIdArray.get(position)+"Ref no \n"+PRE_JOB_REF_NOArray.get(position), Toast.LENGTH_LONG).show();*//*
                                 Intent i = new Intent(workviewbydatebetween.this, workupdateentry.class);
                                 i.putExtra("refno", PRE_JOB_REF_NOArray.get(position));
                                 i.putExtra("username", usernamepassed);
                                 i.putExtra("startDate", startDatePassed);
                                 i.putExtra("endDate", endDatePassed);
-                                startActivity(i);
+                                startActivity(i);*/
                             }
                         });
                     }
