@@ -1,12 +1,8 @@
 package ayon.rahman.shafiqur.bptl3ui;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -32,7 +28,7 @@ public class workentryviewdetails extends AppCompatActivity {
             sernameforclientinfo = "http://103.229.84.171/clientnametoworkid.php", clients = "", clientselected = "", clientselectedid = "",
             temp = null, temp2 = null, servernameforwork = "http://103.229.84.171/wsnamesid.php", previousDate = "http://103.229.84.171/updateDataShow.php", updateServer = "http://103.229.84.171/workEntryUpdate.php";
     String sworkstationnamespinner, smediumoftransportspinner, sclientSpinner, sremarks, sstarttime, sendtime, sPRE_JOB_REF_NO, sclientId, mot, wsCode, jobid;
-    TextView tv1, tv2, tv3, tv4, tv5, tv6, tv7, tv8;
+    TextView tv1, tvClientName, tvWorkstation, jobName, tvMot, tvStartTime, tvEndtime, tvRemarks;
     RequestQueue requestQueue;
 
     @Override
@@ -50,13 +46,13 @@ public class workentryviewdetails extends AppCompatActivity {
 
 
         tv1 = (TextView) findViewById(R.id.textView22);
-        tv2 = (TextView) findViewById(R.id.textView23);
-        tv3 = (TextView) findViewById(R.id.textView24);
-        tv4 = (TextView) findViewById(R.id.textView25);
-        tv5 = (TextView) findViewById(R.id.textView26);
-        tv6 = (TextView) findViewById(R.id.textView27);
-        tv7 = (TextView) findViewById(R.id.textView28);
-        tv8 = (TextView) findViewById(R.id.textView29);
+        tvClientName = (TextView) findViewById(R.id.textView23);
+        tvWorkstation = (TextView) findViewById(R.id.textView24);
+        jobName = (TextView) findViewById(R.id.textView25);
+        tvMot = (TextView) findViewById(R.id.textView26);
+        tvStartTime = (TextView) findViewById(R.id.textView27);
+        tvEndtime = (TextView) findViewById(R.id.textView28);
+        tvRemarks = (TextView) findViewById(R.id.textView29);
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, previousDate, new Response.Listener<String>() {
             @Override
@@ -95,7 +91,7 @@ public class workentryviewdetails extends AppCompatActivity {
                                             temp = (String) jsonObject.get("CLIENT_NAME");
                                             temp2 = (String) jsonObject.get("CLIENT_ID");
                                             if (temp2.equals(sclientId))
-                                                tv8.setText("Client Name :" + temp);
+                                                tvClientName.setText("Client Name :" + temp);
                                         }
 
                                     } catch (JSONException e) {
@@ -133,7 +129,8 @@ public class workentryviewdetails extends AppCompatActivity {
                                             temp2 = null;
                                             temp = (String) object.get("JOB_ID");
                                             temp2 = (String) object.get("JOB_NAME");
-                                            tv2.setText("Job Name :" + temp2);
+                                            if (temp.equals(jobid))
+                                                jobName.setText("Job Name :" + temp2);
                                         } catch (JSONException e) {
                                             e.printStackTrace();
                                         }
@@ -152,23 +149,23 @@ public class workentryviewdetails extends AppCompatActivity {
                         }
                         if (jsonObject.isNull("REMARKS") == false) {
                             sremarks = String.valueOf(jsonObject.get("REMARKS"));
-                            tv3.setText("Remarks :" + sremarks);
+                            tvRemarks.setText("Remarks :" + sremarks);
                         } else {
-                            tv3.setText("Not Found");
+                            tvRemarks.setText("Not Found");
                         }
                         if (jsonObject.isNull("START_TIME") == false) {
                             sstarttime = (String) jsonObject.get("START_TIME");
-                            tv4.setText("Start Time :" + sstarttime);
+                            tvStartTime.setText("Start Time :" + sstarttime);
 
                         } else {
-                            tv4.setText("Could not find Start Time");
+                            tvStartTime.setText("Could not find Start Time");
                         }
                         if (jsonObject.isNull("MOT") == false) {
                             Log.e("MOT", String.valueOf(jsonObject.get("MOT")));
                             mot = (String) jsonObject.get("MOT");
                             //setting up the medium of transport
                             String[] mots = new String[]{"Train", "Rickshaw", "CNG", "Taxicab", "Bus"};
-                            tv5.setText("MOT Name :" + mot);
+                            tvMot.setText("MOT Name :" + mot);
                         } else {
                         }
                         if (jsonObject.isNull("FWS_CODE") == false) {
@@ -183,8 +180,11 @@ public class workentryviewdetails extends AppCompatActivity {
                                             temp2 = null;
                                             JSONObject object = (JSONObject) jsonArray.get(i);
                                             temp = object.getString("WS_NAME");
+                                            Log.e("workstationname", temp);
                                             temp2 = object.getString("WS_CODE");
-                                            tv6.setText("Work Station Name :" + temp);
+                                            Log.e("workstationcode", temp2);
+                                            if (temp2.equals(wsCode))
+                                                tvWorkstation.setText("Work Station Name :" + temp);
                                         } catch (JSONException e) {
                                             e.printStackTrace();
                                         }
@@ -204,10 +204,10 @@ public class workentryviewdetails extends AppCompatActivity {
                         if (jsonObject.isNull("END_TIME") == false) {
 
                             sendtime = (String) jsonObject.get("END_TIME");
-                            tv7.setText("End Time :" + sendtime);
+                            tvEndtime.setText("End Time :" + sendtime);
                             Log.e("END_TIME", String.valueOf(jsonObject.get("END_TIME")));
                         } else {
-                            tv7.setText("Could not find end time");
+                            tvEndtime.setText("Could not find end time");
                         }
                     }
 

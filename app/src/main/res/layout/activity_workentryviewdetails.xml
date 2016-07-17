@@ -22,7 +22,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
+        android:text="Client Name Will Appear Here "
         android:id="@+id/textView23"
         android:gravity="left"
         android:layout_below="@+id/textView22"
@@ -32,7 +32,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
+        android:text="Workstation Name Will Appear Here"
         android:id="@+id/textView24"
         android:gravity="left"
         android:layout_below="@+id/textView23"
@@ -41,7 +41,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
+        android:text="Job Name Will Appear Here"
         android:id="@+id/textView25"
         android:gravity="left"
         android:layout_below="@+id/textView24"
@@ -50,7 +50,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
+        android:text="Medium Of Transport Will Appear Here"
         android:id="@+id/textView26"
         android:gravity="left"
         android:layout_below="@+id/textView25"
@@ -59,7 +59,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
+        android:text="Work Start Time Will Appear Here"
         android:id="@+id/textView27"
         android:gravity="left"
         android:layout_below="@+id/textView26"
@@ -68,20 +68,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
+        android:text="Work End Time Will Appear Here"
         android:id="@+id/textView28"
         android:gravity="left"
-
         android:layout_below="@+id/textView27"
         android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
+        android:text="Remarks Will Appear Here"
         android:id="@+id/textView29"
         android:gravity="left"
-
         android:layout_below="@+id/textView28"
         android:layout_alignParentStart="true" />
 </RelativeLayout>
