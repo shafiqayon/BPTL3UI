@@ -327,7 +327,7 @@ public class dailyworkprogram extends AppCompatActivity
                         params.put("servicename", serviceselected);
                         params.put("hrs", String.valueOf(hours));
                         params.put("startTime", starttime);
-                        params.put("tvStartTime", endtime);
+                        params.put("endTime", endtime);
                         params.put("mot", selectedmot);
                         params.put("wsname", selectedworkspinner);
                         params.put("remarks", remarks);

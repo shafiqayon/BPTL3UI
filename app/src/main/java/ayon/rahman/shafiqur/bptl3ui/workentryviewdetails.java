@@ -28,7 +28,7 @@ public class workentryviewdetails extends AppCompatActivity {
             sernameforclientinfo = "http://103.229.84.171/clientnametoworkid.php", clients = "", clientselected = "", clientselectedid = "",
             temp = null, temp2 = null, servernameforwork = "http://103.229.84.171/wsnamesid.php", previousDate = "http://103.229.84.171/updateDataShow.php", updateServer = "http://103.229.84.171/workEntryUpdate.php";
     String sworkstationnamespinner, smediumoftransportspinner, sclientSpinner, sremarks, sstarttime, sendtime, sPRE_JOB_REF_NO, sclientId, mot, wsCode, jobid;
-    TextView tv1, tvClientName, tvWorkstation, jobName, tvMot, tvStartTime, tvEndtime, tvRemarks;
+    TextView tv1, tvClientName, tvWorkstation, jobName, tvMot, tvendtimetext, tvEndtime, tvRemarks;
     RequestQueue requestQueue;
 
     @Override
@@ -50,7 +50,7 @@ public class workentryviewdetails extends AppCompatActivity {
         tvWorkstation = (TextView) findViewById(R.id.textView24);
         jobName = (TextView) findViewById(R.id.textView25);
         tvMot = (TextView) findViewById(R.id.textView26);
-        tvStartTime = (TextView) findViewById(R.id.textView27);
+        tvendtimetext = (TextView) findViewById(R.id.textView27);
         tvEndtime = (TextView) findViewById(R.id.textView28);
         tvRemarks = (TextView) findViewById(R.id.textView29);
 
@@ -155,10 +155,10 @@ public class workentryviewdetails extends AppCompatActivity {
                         }
                         if (jsonObject.isNull("START_TIME") == false) {
                             sstarttime = (String) jsonObject.get("START_TIME");
-                            tvStartTime.setText("Start Time :" + sstarttime);
+                            tvendtimetext.setText("Start Time :" + sstarttime);
 
                         } else {
-                            tvStartTime.setText("Could not find Start Time");
+                            tvendtimetext.setText("Could not find Start Time");
                         }
                         if (jsonObject.isNull("MOT") == false) {
                             Log.e("MOT", String.valueOf(jsonObject.get("MOT")));
