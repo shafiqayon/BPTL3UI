@@ -414,7 +414,7 @@ public class workupdateentry extends AppCompatActivity
                         params.put("clientName", clientselected);
                         params.put("servicename", serviceselected);
                         params.put("startTime", sstarttime);
-                        params.put("tvendtimetext", sendtime);
+                        params.put("endTime", sendtime);
                         params.put("mot", selectedmot);
                         params.put("wsname", selectedworkspinner);
                         params.put("remarks", sremarks);
