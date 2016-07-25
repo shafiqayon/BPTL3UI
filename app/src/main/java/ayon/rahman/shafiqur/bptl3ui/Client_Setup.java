@@ -346,6 +346,10 @@ public class Client_Setup extends AppCompatActivity
             i.putExtra("username", usernamepassed);
             startActivity(i);
 
+        } else if (id == R.id.nav_dash) {
+            Intent i = new Intent(Client_Setup.this, dash.class);
+            i.putExtra("username", usernamepassed);
+            startActivity(i);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

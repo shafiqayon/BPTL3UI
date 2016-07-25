@@ -149,13 +149,15 @@ public class workviewbydatebetween extends AppCompatActivity
                                 alBuilder.setButton(DialogInterface.BUTTON2, "View", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                       /* Intent i = new Intent(workviewbydatebetween.this, clientUpdate.class);
-                                        i.putExtra("item", PRE_JOB_REF_NOArray.get(position));
-                                        i.putExtra("usernamepassed", usernamepassed);
-                                        startActivity(i);*/
+                                        Intent i = new Intent(workviewbydatebetween.this, workentryviewdetails.class);
+                                        i.putExtra("refno", PRE_JOB_REF_NOArray.get(position));
+                                        i.putExtra("username", usernamepassed);
+                                        i.putExtra("startDate", startDatePassed);
+                                        i.putExtra("endDate", endDatePassed);
+                                        startActivity(i);
 
 
-                                        Toast.makeText(getApplicationContext(), "Edit Option Coming Soon", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(), "VIew Option Coming Soon", Toast.LENGTH_SHORT).show();
                                     }
                                 });
 
@@ -269,7 +271,12 @@ public class workviewbydatebetween extends AppCompatActivity
             i.putExtra("username", usernamepassed);
             startActivity(i);
 
+        } else if (id == R.id.nav_dash) {
+            Intent i = new Intent(workviewbydatebetween.this, dash.class);
+            i.putExtra("username", usernamepassed);
+            startActivity(i);
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

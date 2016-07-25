@@ -36,12 +36,12 @@ public class workentryviewdetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workentryviewdetails);
 
-       /* refNoPassed = getIntent().getExtras().getString("refno");
+        refNoPassed = getIntent().getExtras().getString("refno");
         startDatePassed = getIntent().getExtras().getString("startDate");
         endDatePassed = getIntent().getExtras().getString("endDate");
-        usernamepassed = getIntent().getExtras().getString("username");*/
-        usernamepassed = "S-001";
-        refNoPassed = "S-001-160716";
+        usernamepassed = getIntent().getExtras().getString("username");
+        /*usernamepassed = "S-001";
+        refNoPassed = "S-001-160716";*/
         requestQueue = Volley.newRequestQueue(workentryviewdetails.this);
 
 

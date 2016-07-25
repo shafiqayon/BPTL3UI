@@ -502,7 +502,12 @@ public class clientUpdate extends AppCompatActivity
             i.putExtra("username", usernamepassed);
             startActivity(i);
 
+        } else if (id == R.id.nav_dash) {
+            Intent i = new Intent(clientUpdate.this, dash.class);
+            i.putExtra("username", usernamepassed);
+            startActivity(i);
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
