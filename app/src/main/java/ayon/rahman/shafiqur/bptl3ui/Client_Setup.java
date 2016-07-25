@@ -69,6 +69,7 @@ public class Client_Setup extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
         save = (Button) findViewById(R.id.save);
 
         industrylistspinner = (Spinner) findViewById(R.id.industry);

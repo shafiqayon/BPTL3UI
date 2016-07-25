@@ -95,7 +95,14 @@
             android:name=".workupdateentry"
             android:label="Update Entry"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".workentryviewdetails"></activity>
+        <activity
+            android:name=".workentryviewdetails"
+            android:label="Daily Work Details View"
+            android:launchMode="singleTop"
+            android:parentActivityName=".workviewbydatebetween"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
     </application>
 
 </manifest>

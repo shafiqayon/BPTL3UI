@@ -40,7 +40,7 @@ public class dash extends AppCompatActivity
         dailywork = (Button) findViewById(R.id.dailywork);
         clientView = (Button) findViewById(R.id.clientview);
         alert = (Button) findViewById(R.id.datepicker);
-        workview = (Button) findViewById(R.id.workview);
+
 
         customer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,14 +76,6 @@ public class dash extends AppCompatActivity
             }
         });
 
-        workview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(dash.this, workentryviewdetails.class);
-                i.putExtra("username", usernamepassed);
-                startActivity(i);
-            }
-        });
 
     }
 

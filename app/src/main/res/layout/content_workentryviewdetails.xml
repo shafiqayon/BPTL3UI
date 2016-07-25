@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="ayon.rahman.shafiqur.bptl3ui.workentryviewdetails"
+    android:gravity="center"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_workentryviewdetails">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Work Update Details"
+        android:id="@+id/textView22"
+        android:gravity="left"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Client Name Will Appear Here "
+        android:id="@+id/textView23"
+        android:gravity="left"
+        android:layout_below="@+id/textView22"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Workstation Name Will Appear Here"
+        android:id="@+id/textView24"
+        android:gravity="left"
+        android:layout_below="@+id/textView23"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Name Will Appear Here"
+        android:id="@+id/textView25"
+        android:gravity="left"
+        android:layout_below="@+id/textView24"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Of Transport Will Appear Here"
+        android:id="@+id/textView26"
+        android:gravity="left"
+        android:layout_below="@+id/textView25"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Work Start Time Will Appear Here"
+        android:id="@+id/textView27"
+        android:gravity="left"
+        android:layout_below="@+id/textView26"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Work End Time Will Appear Here"
+        android:id="@+id/textView28"
+        android:gravity="left"
+        android:layout_below="@+id/textView27"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remarks Will Appear Here"
+        android:id="@+id/textView29"
+        android:gravity="left"
+        android:layout_below="@+id/textView28"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

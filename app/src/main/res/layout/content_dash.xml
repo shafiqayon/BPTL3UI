@@ -12,7 +12,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-
     tools:showIn="@layout/app_bar_dash">
 
     <Button
@@ -60,22 +59,14 @@
         android:text="Daily Work Program View"
         android:textColor="#ffffff" />
 
-    <Button
-        android:id="@+id/workview"
-        android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:background="#AF4F8F"
-        android:text="Daily View Single Underdev"
-        android:textColor="#ffffff"
-        android:layout_below="@+id/datepicker"
-        android:layout_alignParentStart="true" />
+
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_below="@+id/workview"
+        android:layout_below="@+id/datepicker"
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:text="@string/appby"
